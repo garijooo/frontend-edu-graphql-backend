@@ -25,7 +25,7 @@ const root = {
     },
 }
 
-const PORT = 5000 || process.env.PORT;
+const PORT = 6006 || process.env.PORT;
 const app = express();
 app.use(
     '/graphql',
