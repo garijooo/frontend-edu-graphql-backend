@@ -14,7 +14,7 @@ exports.notes = [
     {
         id: '3',
         title: '3rd note',
-        text: 'Text of the 3rd note',
+        text: 'Text of the 3rd note note note note note note note note note note note note note note note note note',
         authorId: '2',
     },    
     {

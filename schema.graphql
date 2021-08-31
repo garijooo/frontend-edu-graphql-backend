@@ -18,6 +18,7 @@ type Author {
 type Query {
     getAllNotesByAuthor(id: ID!): [Note]!
     getNote(id: ID!): Note!
+    getAuthor(id: ID!): Author!
 }
 
 type Mutation {

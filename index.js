@@ -24,6 +24,9 @@ const root = {
         });
         return true;
     },
+    getAuthor: (params) => {
+        return authors.find(({ id }) => params.id === id);
+    },
 }
 
 const PORT = 6006 || process.env.PORT;
