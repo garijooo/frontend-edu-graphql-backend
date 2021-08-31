@@ -2,6 +2,7 @@ const express = require("express");
 const { graphqlHTTP } = require("express-graphql");
 const { buildSchema } = require("graphql");
 const { readFileSync } = require("fs");
+const cors = require("cors");
 const { notes, authors } = require('./utils/api');
 
 const schemaString = readFileSync('./schema.graphql', { encoding: 'utf-8'});
@@ -27,6 +28,7 @@ const root = {
 
 const PORT = 6006 || process.env.PORT;
 const app = express();
+app.use(cors());
 app.use(
     '/graphql',
     graphqlHTTP({
