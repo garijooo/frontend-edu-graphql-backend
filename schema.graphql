@@ -1,0 +1,25 @@
+type Note {
+    id: ID!
+    title: String!
+    text: String!
+    authorId: String!
+}
+
+input NoteInput {
+    title: String!
+    text: String!
+}
+
+type Author {
+    id: ID!
+    username: String!
+}
+
+type Query {
+    getAllNotesByAuthor(id: ID!): [Note]!
+    getNote(id: ID!): Note!
+}
+
+type Mutation {
+    addNote(note: NoteInput!, authorId: String!): Boolean!
+}
