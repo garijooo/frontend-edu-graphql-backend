@@ -16,7 +16,7 @@ type Author {
 }
 
 type Query {
-    getAllNotesByAuthor(id: ID!): [Note]!
+    getAllNotesByAuthor(id: ID!): [Note!]!
     getNote(id: ID!): Note!
     getAuthor(id: ID!): Author!
 }
