@@ -6,6 +6,7 @@ type Note {
 }
 
 input NoteInput {
+    id: ID!
     title: String!
     text: String!
 }
@@ -16,11 +17,14 @@ type Author {
 }
 
 type Query {
-    getAllNotesByAuthor(id: ID!): [Note]!
+    getAllNotesByAuthor(id: ID!): [Note!]!
+    getAllNotes: [Note!]!
+    getNotesAmount: Int!
     getNote(id: ID!): Note!
     getAuthor(id: ID!): Author!
 }
 
 type Mutation {
     addNote(note: NoteInput!, authorId: String!): Boolean!
+    editNote(note: NoteInput!): Boolean!
 }
